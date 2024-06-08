@@ -1,11 +1,13 @@
 <main class="main">
   <div class="inner">
+      <% if current_user %>
     <%# ログインしているときは以下を表示する %>
        <div class="greeting">
         こんにちは、
-      <%= link_to current_user.name, root_path, class: :greeting__link%>
+      <%= link_to current_user.name, user_path(current_user.id), class: :greeting__link%>
       さん
-       </div> 
+       </div>
+           <% end %> 
     <%# // ログインしているときは上記を表示する %>
    <div class="card__wrapper">
     <% @prototypes.each do |prototype| %>

@@ -5,7 +5,8 @@
     <p class="card__summary">
       <%= prototype.cath_copy %>
     </p>
-    <%= link_to "by #{prototype.user.name}", root_path, class: :card__user %>
+    <%= link_to "by #{prototype.user.name}", user_path(prototype.user), class: :card__user %>
+
   </div>
 </div>
 

@@ -11,8 +11,6 @@ class CommentsController < ApplicationController
       render 'prototypes/show', status: :unprocessable_entity
 
     end
-
-
   end
 
   private
